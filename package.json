@@ -2,7 +2,9 @@
   "name": "atelier",
   "version": "1.0.0",
   "description": "나만의 개인 블로그 제작",
-  "scripts": {},
+  "scripts": {
+    "dev" : "node ./src/server.js"
+  },
   "keywords": [],
   "author": "halion",
   "license": "MIT",
