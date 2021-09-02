@@ -1,0 +1,12 @@
+{
+  "name": "atelier",
+  "version": "1.0.0",
+  "description": "나만의 개인 블로그 제작",
+  "scripts": {},
+  "keywords": [],
+  "author": "halion",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
