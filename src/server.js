@@ -3,8 +3,6 @@ const fs = require("fs");
 
 const app = express();
 
-console.log("Hello");
-
 app.use("/public", express.static(__dirname + "/public"));
 
 app.get("/", (req,res) => {
@@ -17,4 +15,6 @@ app.get("/", (req,res) => {
     })
 })
 
-app.listen(3000);
+app.listen(3000, () => {
+    console.log("서버가 켜졌습니다.");
+});
