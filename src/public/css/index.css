@@ -1,0 +1,22 @@
+@import "./reset.css";
+
+.topNavigation{
+    position: fixed;
+    display: flex;
+    top: 48px;
+    right: 0px;
+    height: 48px;
+    align-items: center;
+    -webkit-box-align: center;
+    z-index: 1000;
+    padding: 0px 64px;
+}
+
+.topLink{
+    font-weight: 600;
+    margin-right: 2em;
+    letter-spacing: 0.2ch;
+}
+.logo{
+    height: 48px;
+}
