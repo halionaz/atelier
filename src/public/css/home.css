@@ -45,6 +45,7 @@ a:hover {
 }
 .backgroundShadowImg{
     max-height: 86%;
+    opacity: 0.3;
 }
 .backgroundImg{
     max-height: 84%;
@@ -79,9 +80,9 @@ a:hover {
 /* 컨텐츠 */
 
 .contents{
-    position: relative;
+    /* position: relative; */
     z-index: 500;
-    width: 60%;
+    /* width: 60%; */
 }
 .content{
     display: flex;

@@ -11,6 +11,7 @@ app.use("/public", express.static(__dirname + "/public"));
 app.use(favicon(__dirname + '/public/icon/magpie.ico'));
 
 app.get("/", (req,res) => {
+    console.log("서버에 접속했습니다.");
     res.render("home");
 });
 
