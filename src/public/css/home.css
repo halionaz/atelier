@@ -80,9 +80,9 @@ a:hover {
 /* 컨텐츠 */
 
 .contents{
-    /* position: relative; */
+    position: relative;
     z-index: 500;
-    /* width: 60%; */
+    width: 60%;
 }
 .content{
     display: flex;
@@ -96,7 +96,7 @@ a:hover {
 .caption{
     background-color: var(--main-color);
     color: white;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 600;
     display: inline-block;
     padding: 5px;
@@ -107,6 +107,8 @@ a:hover {
     .topLink{
         display: none;
     }
+}
+@media (max-width : 700px){
     .contents{
         width: 100%;
     }
