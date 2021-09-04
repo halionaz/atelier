@@ -81,7 +81,7 @@ a:hover {
 .contents{
     position: relative;
     z-index: 500;
-    width: 50%;
+    width: 60%;
 }
 .content{
     display: flex;
