@@ -1,8 +1,8 @@
 @import "./reset.css";
 
 :root{
-    --main-dark-color : rgb(61, 41, 7);
-    --main-color : rgb(250,161,10);
+    --main-dark-color : rgb(54, 25, 5);
+    --main-color : rgb(252,133,60);
 }
 
 h1{
