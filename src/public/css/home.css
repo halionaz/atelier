@@ -1,21 +1,30 @@
 @import "./reset.css";
 
+:root{
+    --main-dark-color : rgb(36, 24, 3);
+    --main-color : rgb(250,161,10);
+}
+
+html{
+    color: var(--main-dark-color);
+}
 a:link { 
-    color: black; 
+    color: var(--main-dark-color);
     text-decoration: none;
 }
 a:visited { 
-    color: black; 
+    color: var(--main-dark-color);
     text-decoration: none;
 }
 a:hover { 
-    color: black; 
+    color: var(--main-dark-color);
     text-decoration: none;
 }
 
 /* 백그라운드 */
 .background{
     overflow: hidden;
+    z-index: 0;
 }
 .backgroundSizer{
     position: absolute;
@@ -57,4 +66,16 @@ a:hover {
 }
 .logo{
     height: 48px;
+}
+
+.contents{
+    position: relative;
+    z-index: 500;
+}
+
+/* 반응형 웹 */
+@media (max-width : 600px){
+    .topLink{
+        display: none;
+    }
 }
