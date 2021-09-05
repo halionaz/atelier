@@ -1,7 +1,12 @@
 const lipsum = document.querySelector("#lipsum");
 const nameH1 = lipsum.querySelector("h1");
 
+/**
+ * 짹짹으로 이루어진 랜덤 로렘 입숨을 만들어주는 함수입니다.
+ * @halion
+ */
 function randomLipsum(){
+
     const count = Math.floor(Math.random() * 2) + 2;
     let capCount, wordCount, dice;
     for(let i = 0; i < count; i++){
