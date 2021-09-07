@@ -5,6 +5,13 @@
     --main-color : rgb(252,133,60);
 }
 
+strong{
+    font-weight: 600;
+}
+p{
+    display: block;
+    font-weight: 400;
+}
 h1{
     font-size: smaller;
     font-weight: 600;
@@ -13,8 +20,14 @@ h1{
     margin-bottom: 32px;
 }
 html{
+    font-family: Gotham, "Gotham SSm A", "Gotham SSm B", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     color: var(--main-dark-color);
+    text-size-adjust: 100%;
+    font-size: 14px;
     letter-spacing: -0.05ch;
+}
+body{
+    line-height: 1.5;
 }
 a:link { 
     color: var(--main-dark-color);
@@ -99,7 +112,17 @@ a:hover {
     font-size: 3.5rem;
     font-weight: 600;
     display: inline-block;
-    padding: 5px;
+    padding: 0px 7px;
+}
+.contentPadding a:link,.contentPadding a:visited{
+    text-decoration: dashed underline 1px;
+    transition-duration: 0.3s;
+
+}
+.contentPadding a:link:hover,.contentPadding a:visited:hover{
+    text-decoration: solid underline 1px;
+    color: white;
+    background-color: var(--main-color);
 }
 
 /* 반응형 웹 */

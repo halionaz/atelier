@@ -3,10 +3,13 @@ html(lang="ko")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(property="og:description",content="이 페이지에 들어오면 당신의 개인정보가 위험합니다.")
-        title halion 
+        title atelier 
         link(rel="stylesheet", href="/public/css/home.css")
         link(rel="icon", href="/public/icon/magpie.ico")
+        link(rel="preconnect", href="//fonts.googleapis.com")
+        link(rel="preconnect", href="//fonts.gstatic.com",crossorigin="crossorigin")
+        link(rel="stylesheet", href="//cloud.typography.com/6794156/6837792/css/fonts.css")
+        link(rel="stylesheet", href="//fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap")
     body 
         .background 
             .backgroundSizer 
@@ -27,5 +30,29 @@ html(lang="ko")
         .contents
             .content 
                 .contentPadding#lipsum
-                    h1 하승준의 잉여스러운 포트폴리오
+                    h1 하승준의 잉여스러운 작업실
+                    div(style="height:2em")
+                    p 
+                        strong 하승준
+                        br
+                        .
+                            Human Collector
+                        br
+                        .
+                            Software Engineer
+                        br 
+                        . 
+                            Design Artist
+                        br
+                        a(href="https://info.korea.ac.kr/info/index.do#none",target="_blank") 고려대학교 정보대학 컴퓨터학과
+                        . 
+                            &nbsp학부과정
+                    div(style="height:1em")
+                    p 공군 입대까지 - 
+                        span#timePercent 
+                        . 
+                            %, 
+                        span#timeDay 
+                        . 
+                            일
         script(src="/public/js/home.js") 
