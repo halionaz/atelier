@@ -22,71 +22,94 @@ html{
     font-family: Gotham, "Gotham SSm A", "Gotham SSm B", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     color: var(--main-dark-color);
     text-size-adjust: 100%;
-    font-size: 14px;
+    width: 100%;
+    overflow-x: hidden;
+    font-size: calc(10px + 0.7vmin);
     letter-spacing: -0.05ch;
 }
 body{
+    width: 100%;
+    background-color: white;
+    display: block;
     line-height: 1.5;
 }
-a:link { 
-    color: var(--main-dark-color);
-    text-decoration: none;
+a:link, a:visited { 
+    color: inherit;
+    text-decoration: underline 1px dashed;
+    transition-property: color, background;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
 }
-a:visited { 
-    color: var(--main-dark-color);
-    text-decoration: none;
-}
-a:hover { 
-    color: var(--main-dark-color);
-    text-decoration: none;
+a:link:hover,a:visited:hover { 
+    background: var(--main-color);
+    color: white;
+    text-decoration: underline 1px solid;
 }
 
 /* 백그라운드 */
 .background{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
     overflow: hidden;
     z-index: 0;
+    pointer-events: none;
 }
 .backgroundSizer{
     position: absolute;
     display: flex;
     width: 100%;
     height: 100%;
+    -webkit-box-align: center;
     align-items: center;
     justify-content: center;
     transform: translateX(30%);
 }
 .backgroundShadowImg{
+    width: 86%;
     max-height: 86%;
+    object-fit: contain;
+    object-position: center center;
     opacity: 0.3;
+    /* transform 속성 JS로 지정 */
 }
 .backgroundImg{
+    width: 86%;
     max-height: 84%;
-    transform: translate(-2%,-1%);
-    transition-duration: 1s;
-}
-.backgroundImg:hover{
-    transform: translate(1%,-3.5%);
+    object-fit: contain;
+    object-position: center center;
+    transform: translate(-1.5%,-0.5%);
+    /* transform 속성 JS로 지정 */
 }
 
 /* 네비게이션 바 */
 .topNavigation{
     position: fixed;
     display: flex;
+    -webkit-box-align: center;
+    align-items: center;
     top: 48px;
     right: 0px;
     height: 48px;
-    align-items: center;
-    -webkit-box-align: center;
     z-index: 1000;
     padding: 0px 64px;
 }
 .topLink{
+    letter-spacing: 0.2ch;
     font-weight: 600;
     margin-right: 2em;
-    letter-spacing: 0.2ch;
 }
 .logo{
     height: 48px;
+}
+.topNavigation a, .topNavigation a:link, .topNavigation a:visited{
+    color: inherit;
+    text-decoration: none;
+}
+.topNavigation a:hover{
+    color: inherit;
+    background : none;
 }
 
 /* 컨텐츠 */
@@ -94,13 +117,17 @@ a:hover {
 .contents{
     position: relative;
     z-index: 500;
-    width: 60%;
 }
 .content{
-    display: flex;
-    align-items: center;
+    position: relative;
     width: 100%;
     height: 100vh;
+    min-height: 600px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    z-index: 500;
+    /* height: 100vh; */
 }
 .contentPadding{
     padding: 0px 64px; 
@@ -116,25 +143,15 @@ a:hover {
     display: inline-block;
     padding: 0px 7px;
 }
-.contentPadding a:link,.contentPadding a:visited{
-    text-decoration: dashed underline 1px;
-    transition-duration: 0.3s;
-
-}
-.contentPadding a:link:hover,.contentPadding a:visited:hover{
-    text-decoration: solid underline 1px;
-    color: white;
-    background-color: var(--main-color);
-}
 
 /* 반응형 웹 */
+@media (max-width : 960px){
+    .caption{
+        font-size: 2.5rem;
+    }
+}
 @media (max-width : 600px){
     .topLink{
         display: none;
-    }
-}
-@media (max-width : 700px){
-    .contents{
-        width: 100%;
     }
 }
