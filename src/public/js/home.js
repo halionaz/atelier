@@ -1,5 +1,5 @@
 const lipsum = document.querySelector("#lipsum");
-const nameH1 = lipsum.querySelector("h1");
+const nameH1 = lipsum.querySelector(".hdiv");
 const timePercent = lipsum.querySelector("#timePercent");
 const timeDay = lipsum.querySelector("#timeDay");
 
@@ -39,7 +39,9 @@ function randomLipsum(){
 
 function dday(){
 
+    // 카운트 퍼센테이지 기준 일자
     const startDate = new Date("2021-09-01T00:00:00");
+    // 입영 날짜
     const setDate = new Date("2022-01-06T08:00:00");
     const now = new Date();
 
@@ -48,9 +50,7 @@ function dday(){
     const percent = (((all-dist)/all)*100).toFixed(2);
     const day = Math.floor(dist/(1000*60*60*24));
     timePercent.innerText = percent;
-    timeDay.innerText = day
-    dateWhenIGoToAirForce-date
-
+    timeDay.innerText = day;
 }
 
 randomLipsum();
