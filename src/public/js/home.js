@@ -95,13 +95,11 @@ function backgroundHandler(event){
     }
 }
 
+backImg.style.transform = `translate(-0.5%,0.5%)`;
+shadowImg.style.transform = `translate(0.5%,-0.5%)`;
 if(window.innerWidth > 600){
     body.addEventListener("mousemove", backgroundHandler);
-} else {
-    backImg.style.transform = `translate(-0.5%,0.5%)`;
-    shadowImg.style.transform = `translate(0.5%,-0.5%)`;
 }
-
 
 randomLipsum();
 dday();
