@@ -3,6 +3,10 @@ const nameH1 = lipsum.querySelector(".hdiv");
 const timePercent = lipsum.querySelector("#timePercent");
 const timeDay = lipsum.querySelector("#timeDay");
 
+const body = document.querySelector("body");
+const shadowImg = document.querySelector(".backgroundShadowImg");
+const backImg = document.querySelector(".backgroundImg");
+
 /**
  * 짹짹으로 이루어진 랜덤 로렘 입숨을 만들어주는 함수입니다.
  * @halion
@@ -50,7 +54,54 @@ function dday(){
     const day = Math.floor(dist/(1000*60*60*24));
     timePercent.innerText = percent;
     timeDay.innerText = day;
+
 }
+
+let prevX = 0, prevY = 0;
+
+function backgroundHandler(event){
+    const widthMid = window.innerWidth/2;
+    const heightMid = window.innerHeight/2;
+    const xVal = widthMid - event.offsetX;
+    const yVal = heightMid - event.offsetY;
+    if(xVal > 0){
+        if(yVal > 0){
+            if(prevX != 1 || prevY != 1){
+                backImg.style.transform = `translate(0.5%,0.5%)`;
+                shadowImg.style.transform = `translate(-0.5%,-0.5%)`;
+                prevX = 1, prevY = 1;
+            }
+        } else {
+            if(prevX != 1 || prevY != -1){
+                backImg.style.transform = `translate(0.5%,-0.5%)`;
+                shadowImg.style.transform = `translate(-0.5%,0.5%)`;
+                prevX = 1, prevY = -1;
+            }
+        }
+    } else{
+        if(yVal > 0){
+            if(prevX != -1 || prevY != 1){
+                backImg.style.transform = `translate(-0.5%,0.5%)`;
+                shadowImg.style.transform = `translate(0.5%,-0.5%)`;
+                prevX = -1, prevY = 1;
+            }
+        } else {
+            if(prevX != -1 || prevY != -1){
+                backImg.style.transform = `translate(-0.5%,-0.5%)`;
+                shadowImg.style.transform = `translate(0.5%,0.5%)`;
+                prevX = -1, prevY = -1;
+            }
+        }
+    }
+}
+
+if(window.innerWidth > 600){
+    body.addEventListener("mousemove", backgroundHandler);
+} else {
+    backImg.style.transform = `translate(-0.5%,0.5%)`;
+    shadowImg.style.transform = `translate(0.5%,-0.5%)`;
+}
+
 
 randomLipsum();
 dday();

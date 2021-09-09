@@ -71,16 +71,15 @@ a:link:hover,a:visited:hover {
     max-height: 86%;
     object-fit: contain;
     object-position: center center;
-    opacity: 0.1;
-    /* transform 속성 JS로 지정 */
+    transition-duration: 1s;
+    opacity: 0.15;
 }
 .backgroundImg{
     width: 86%;
     max-height: 84%;
     object-fit: contain;
     object-position: center center;
-    transform: translate(-1.5%,-0.5%);
-    /* transform 속성 JS로 지정 */
+    transition-duration: 1s;
 }
 
 /* 네비게이션 바 */
@@ -142,6 +141,17 @@ a:link:hover,a:visited:hover {
     font-weight: 600;
     display: inline-block;
     padding: 0px 7px;
+}
+
+/* Footer */
+
+.footerCopyright{
+    text-align: justify;
+    text-transform: uppercase;
+    letter-spacing: 0.1ch;
+    font-weight: bold;
+    font-size: smaller;
+    margin-bottom: 32px;
 }
 
 /* 반응형 웹 */
