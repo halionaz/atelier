@@ -71,7 +71,7 @@ a:link:hover,a:visited:hover {
     max-height: 86%;
     object-fit: contain;
     object-position: center center;
-    opacity: 0.3;
+    opacity: 0.1;
     /* transform 속성 JS로 지정 */
 }
 .backgroundImg{

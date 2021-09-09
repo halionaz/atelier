@@ -9,9 +9,8 @@ const timeDay = lipsum.querySelector("#timeDay");
  */
 function randomLipsum(){
 
-    const count = Math.floor(Math.random() * 2) + 2;
     let capCount, wordCount, dice;
-    for(let i = 0; i < count; i++){
+    for(let i = 0; i < 2; i++){
         const div = document.createElement("div");
         const caption = document.createElement("div");
         capCount = Math.floor(Math.random() * 2) + 2;
