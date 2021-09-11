@@ -2,7 +2,7 @@
 
 개인 블로그 제작 삽질하기
 
-[바로가기 (홈서버라 안 열려 있을 수 있음)](http://www.chat.randompresident.com/)
+<a href="http://www.chat.randompresident.com/" target="_blank">바로가기 (홈서버라 안 열려 있을 수 있음)</a>
 
 - Node.js
     - express.js
