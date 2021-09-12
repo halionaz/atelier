@@ -214,4 +214,7 @@ a:link:hover,a:visited:hover {
     .topLink{
         display: none;
     }
+    .contentPadding{
+        padding: 0px 16px; 
+    }
 }
