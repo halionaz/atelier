@@ -100,10 +100,6 @@ shadowImg.style.transform = `translate(0.5%,-0.5%)`;
 if(window.innerWidth > 600){
     body.addEventListener("mousemove", backgroundHandler);
 }
-body.addEventListener("click",()=>{
-    console.log("vibrate");
-    window.navigator.vibrate([200]);
-})
 
 randomLipsum();
 dday();
