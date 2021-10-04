@@ -151,16 +151,18 @@ a:link:hover,a:visited:hover {
 
 /* 링크 */
 
-.article{
-    width: 100%;
-    max-width: 960px;
-    text-align: justify;
-    margin-bottom: 32px;
+.social{
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(10em,1fr));
     grid-auto-rows: 10em;
     justify-content: space-around;
     gap: 2em 1em;
+}
+.article{
+    width: 100%;
+    max-width: 960px;
+    text-align: justify;
+    margin-bottom: 32px;
 }
 .article a, .article a:link:hover, .article a:visited:hover{
     background: inherit; 
