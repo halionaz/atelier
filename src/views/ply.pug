@@ -3,8 +3,9 @@ html(lang="ko")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title atelier 
+        title playlist 
         link(rel="stylesheet", href="/public/css/home.css")
+        link(rel="stylesheet", href="/public/css/ply.css")
         link(rel="icon", href="/public/icon/magpie.ico")
         link(rel="preconnect", href="//fonts.googleapis.com")
         link(rel="preconnect", href="//fonts.gstatic.com",crossorigin="crossorigin")
@@ -16,8 +17,8 @@ html(lang="ko")
             .backgroundSizer 
                 img.backgroundImg(src="public/icon/whiteMagpie.svg", alt="magpie")
         nav.topNavigation
-            .topLink.ply
-                a(href="/ply") Playlist
+            .topLink.home
+                a(href="/") Home
             .topLink.blog
                 a(href="https://hasaja.tistory.com/", target="_blank") Blog
             .topLink.solvedac 
@@ -29,49 +30,14 @@ html(lang="ko")
             a(href="#")
                 img.logo(src="public/icon/magpie.svg", alt="halion's magpie logo") 
         .contents
-            .content 
-                .contentPadding#lipsum
-                    .hdiv  
-                        h1 halion's atelier 
-                        h1 ㅎㅅㅈ의 잉여스러운 작업실
-                    div(style="height:64px")
-                    p 
-                        strong 하승준
-                        br
-                        .
-                            인재 수집가
-                        br
-                        .
-                            소프트웨어 엔지니어 @ 
-                        a(href="https://github.com/KWEBofficial",target="_blank") KWEB
-                        br 
-                        . 
-                            슈퍼개미가 되고 싶은 일개미
-                        br 
-                        . 
-                            디자이너 & 아티스트
-                        br
-                        a(href="https://info.korea.ac.kr/info/index.do#none",target="_blank") 고려대학교 정보대학 컴퓨터학과
-                        . 
-                            &nbsp학부재학
-                    div(style="height:1em")
-                    p 공군 입대까지 - 
-                        span#timePercent 
-                        . 
-                            %, 
-                        span#timeDay 
-                        . 
-                            일
+            div(style="height:8em")
             .contentPadding
                 .hdiv 
-                    h1 Links
+                    h1 Playlist
                 div 
-                    .caption 이 인간은
-                div 
-                    .caption 인터넷 노마드입니다
+                    .caption 하승준 선정 띵곡선
                 div(style="height:64px")
                 div(style="height:2em")
-                h2 Social 
                 .article 
                     div(style="position:relative; cursor:pointer;")
                         .block(style="background: rgb(118, 2, 35);")

@@ -25,7 +25,7 @@ app.use(session({
 
 app.get("/", (req,res) => {
     if(req.session.num){
-        console.log(`${req.session.num}가 서버에 접속했습니다.`);
+        console.log(`${req.session.num}가 홈에 접속했습니다.`);
     } else {
         req.session.num = memberCnt;
         memberCnt++;
@@ -33,6 +33,17 @@ app.get("/", (req,res) => {
     }
     res.render("home");
 });
+
+app.get("/ply", (req, res) => {
+    if(req.session.num){
+        console.log(`${req.session.num}이 플레이리스트에 접속했습니다.`);
+    } else {
+        req.session.num = memberCnt;
+        memberCnt++;
+        console.log(`새로운 참가자, ${req.session.num}이 참가했습니다.`);
+    }
+    res.render("ply");
+})
 
 app.listen(3000, () => {
     console.log("서버가 켜졌습니다.");
