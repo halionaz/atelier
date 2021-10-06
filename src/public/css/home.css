@@ -3,6 +3,7 @@
 :root{
     --main-dark-color : rgb(54, 25, 5);
     --main-color : rgb(252,133,60);
+    --main-backColor : rgb(229, 231, 233);
 }
 
 strong{

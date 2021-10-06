@@ -11,11 +11,6 @@ html(lang="ko")
         link(rel="preconnect", href="//fonts.gstatic.com",crossorigin="crossorigin")
         link(rel="stylesheet", href="//fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap")
     body 
-        .background 
-            .backgroundSizer 
-                img.backgroundShadowImg(src="public/icon/magpieShadow.png", alt="magpie shadow")
-            .backgroundSizer 
-                img.backgroundImg(src="public/icon/whiteMagpie.svg", alt="magpie")
         nav.topNavigation
             .topLink.home
                 a(href="/") Home
@@ -31,7 +26,7 @@ html(lang="ko")
                 img.logo(src="public/icon/magpie.svg", alt="halion's magpie logo") 
         .contents
             .content.centerAlign 
-                .div 안녕
+                include player.pug 
             footer 
                 .contentPadding
                     .footerCopyright © 2019 - 2021
@@ -45,4 +40,4 @@ html(lang="ko")
                         . 
                             All Rights Rerserved to shiftpsh
             div(style="height:4em")
-        script(src="/public/js/home.js") 
+    script(src="/public/js/ply.js") 
