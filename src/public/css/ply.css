@@ -1,8 +1,23 @@
 body{
     background-color: var(--main-backColor);
+    user-select: none ;
+    -webkit-tap-highlight-color: transparent ;
+    transition: background-color 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
 .centerAlign{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.player{
+    width: 17.15em;
+    display: flex;
+    overflow: hidden;
+    font-size: 1.22em;
+    border-radius: 1.35em;
+    flex-direction: column;
+    background-color: white;
+    height: 20em;
 }
