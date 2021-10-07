@@ -3,7 +3,31 @@
         .player_img
             button.player_button.playlist
                 img(src="http://physical-authority.surge.sh/imgs/icon/playlist.svg", alt="playlist icon")
-            button.player_button.play 
+            button.player_button.play
                 img(src="http://physical-authority.surge.sh/imgs/icon/play.svg", alt="play icon")
                 img(src="http://physical-authority.surge.sh/imgs/icon/pause.svg", alt="pause icon")
+            .slider_content 
+                img.img.slder_img(src="http://physical-authority.surge.sh/imgs/1.jpg", alt="cover")
+                img.img.slder_img(src="http://physical-authority.surge.sh/imgs/2.jpg", alt="cover")
+                img.img.slder_img(src="http://physical-authority.surge.sh/imgs/3.jpg", alt="cover")
+                img.img.slder_img(src="http://physical-authority.surge.sh/imgs/4.jpg", alt="cover")
+                img.img.slder_img(src="http://physical-authority.surge.sh/imgs/5.jpg", alt="cover")
         .player_controls
+            button.player_button.back 
+                img.img(src="http://physical-authority.surge.sh/imgs/icon/back.svg", alt="back icon")
+            p.player_context.slider_context 
+                strong.slider_name 
+                span.player_title.slider_title 
+            button.player_button.next 
+                img.img(src="http://physical-authority.surge.sh/imgs/icon/next.svg", alt="next icon")
+            .progress 
+                .progress_filled 
+    ul.player_playlist.list 
+        li.player_song 
+            img.player_img.img(src="http://physical-authority.surge.sh/imgs/1.jpg", alt="cover")
+            p.player_context 
+                b.player_song-name no time 
+                span.flex 
+                    span.player_title lastlings 
+                    span.player_song-time 
+            audio.audio(src="http://physical-authority.surge.sh/music/1.mp3") 
