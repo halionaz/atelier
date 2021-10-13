@@ -1,33 +1,86 @@
-.player 
-    .player_header 
-        .player_img
-            button.player_button.playlist
-                img(src="http://physical-authority.surge.sh/imgs/icon/playlist.svg", alt="playlist icon")
-            button.player_button.play
-                img(src="http://physical-authority.surge.sh/imgs/icon/play.svg", alt="play icon")
-                img(src="http://physical-authority.surge.sh/imgs/icon/pause.svg", alt="pause icon")
-            .slider_content 
-                img.img.slder_img(src="http://physical-authority.surge.sh/imgs/1.jpg", alt="cover")
-                img.img.slder_img(src="http://physical-authority.surge.sh/imgs/2.jpg", alt="cover")
-                img.img.slder_img(src="http://physical-authority.surge.sh/imgs/3.jpg", alt="cover")
-                img.img.slder_img(src="http://physical-authority.surge.sh/imgs/4.jpg", alt="cover")
-                img.img.slder_img(src="http://physical-authority.surge.sh/imgs/5.jpg", alt="cover")
-        .player_controls
-            button.player_button.back 
-                img.img(src="http://physical-authority.surge.sh/imgs/icon/back.svg", alt="back icon")
-            p.player_context.slider_context 
-                strong.slider_name 
-                span.player_title.slider_title 
-            button.player_button.next 
-                img.img(src="http://physical-authority.surge.sh/imgs/icon/next.svg", alt="next icon")
-            .progress 
-                .progress_filled 
-    ul.player_playlist.list 
-        li.player_song 
-            img.player_img.img(src="http://physical-authority.surge.sh/imgs/1.jpg", alt="cover")
-            p.player_context 
-                b.player_song-name no time 
-                span.flex 
-                    span.player_title lastlings 
-                    span.player_song-time 
-            audio.audio(src="http://physical-authority.surge.sh/music/1.mp3") 
+.player
+  .player__header
+    .player__img.player__img--absolute.slider
+      button.player__button.player__button--absolute--nw.playlist
+        img(src='http://physical-authority.surge.sh/imgs/icon/playlist.svg' alt='playlist-icon')
+      button.player__button.player__button--absolute--center.play
+        img(src='http://physical-authority.surge.sh/imgs/icon/play.svg' alt='play-icon')
+        img(src='http://physical-authority.surge.sh/imgs/icon/pause.svg' alt='pause-icon')
+      .slider__content
+        img.img.slider__img(src='http://physical-authority.surge.sh/imgs/1.jpg' alt='cover')
+        img.img.slider__img(src='http://physical-authority.surge.sh/imgs/2.jpg' alt='cover')
+        img.img.slider__img(src='http://physical-authority.surge.sh/imgs/3.jpg' alt='cover')
+        img.img.slider__img(src='http://physical-authority.surge.sh/imgs/4.jpg' alt='cover')
+        img.img.slider__img(src='http://physical-authority.surge.sh/imgs/5.jpg' alt='cover')
+        img.img.slider__img(src='http://physical-authority.surge.sh/imgs/6.jpg' alt='cover')
+        img.img.slider__img(src='http://physical-authority.surge.sh/imgs/7.jpg' alt='cover')
+    .player__controls
+      button.player__button.back
+        img.img(src='http://physical-authority.surge.sh/imgs/icon/back.svg' alt='back-icon')
+      p.player__context.slider__context
+        strong.slider__name
+        span.player__title.slider__title
+      button.player__button.next
+        img.img(src='http://physical-authority.surge.sh/imgs/icon/next.svg' alt='next-icon')
+      .progres
+        .progres__filled
+  ul.player__playlist.list
+    li.player__song
+      img.player__img.img(src='http://physical-authority.surge.sh/imgs/1.jpg' alt='cover')
+      p.player__context
+        b.player__song-name no time
+        span.flex
+          span.player__title lastlings
+          span.player__song-time
+      audio.audio(src='http://physical-authority.surge.sh/music/1.mp3')
+    li.player__song
+      img.player__img.img(src='http://physical-authority.surge.sh/imgs/2.jpg' alt='cover')
+      p.player__context
+        b.player__song-name blinding lights
+        span.flex
+          span.player__title the weeknd
+          span.player__song-time
+      audio.audio(src='http://physical-authority.surge.sh/music/2.mp3')
+    li.player__song
+      img.player__img.img(src='http://physical-authority.surge.sh/imgs/3.jpg' alt='cover')
+      p.player__context
+        b.player__song-name &dcy;&zhcy;&ocy;&vcy;&acy;&ncy;&ncy;&acy;
+        span.flex
+          span.player__title enrasta
+          span.player__song-time
+      audio.audio(src='http://physical-authority.surge.sh/music/3.mp3')
+    li.player__song
+      img.player__img.img(src='http://physical-authority.surge.sh/imgs/4.jpg' alt='cover')
+      p.player__context
+        b.player__song-name a man
+        span.flex
+          span.player__title travis scott
+          span.player__song-time
+      audio.audio(src='http://physical-authority.surge.sh/music/4.mp3')
+    li.player__song
+      img.player__img.img(src='http://physical-authority.surge.sh/imgs/5.jpg' alt='cover')
+      p.player__context
+        b.player__song-name unforgetting
+        span.flex
+          span.player__title zaxx
+          span.player__song-time
+      audio.audio(src='http://physical-authority.surge.sh/music/5.mp3')
+    li.player__song
+      img.player__img.img(src='http://physical-authority.surge.sh/imgs/6.jpg' alt='cover')
+      p.player__context
+        b.player__song-name waharan
+        span.flex
+          span.player__title Randall
+          span.player__song-time
+      audio.audio(src='http://physical-authority.surge.sh/music/6.mp3')
+    li.player__song
+      img.player__img.img(src='http://physical-authority.surge.sh/imgs/7.jpg' alt='cover')
+      p.player__context
+        b.player__song-name
+          | starlight feat mr gabriel 
+          span.uppercase 4am
+          |  remix
+        span.flex
+          span.player__title jai wolf
+          span.player__song-time
+      audio.audio(src='http://physical-authority.surge.sh/music/7.mp3')
