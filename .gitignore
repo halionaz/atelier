@@ -1,5 +1,4 @@
 /node_modules
 /sessions
 /src/secret.js
-/src/public/img
-/src/public/music
+/src/public/bin
