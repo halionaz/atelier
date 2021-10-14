@@ -341,7 +341,7 @@ img[alt ="pause-icon"] {
     position: relative ;
     align-items: center ;
     border-radius: inherit ;
-    background-color: #78adfe ;
+    background-color: var(--sub-color) ;
     
 }
 
@@ -353,7 +353,7 @@ img[alt ="pause-icon"] {
     height: .35em ;
     border-radius: 50% ;
     position: absolute ;
-    background-color: #5781bd ;
+    background-color: var(--main-color) ;
     
 }
 
