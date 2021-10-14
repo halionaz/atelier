@@ -5,7 +5,7 @@ console.log("Hello, It's working");
 
 "use strict";
 
-const bgBody = ["#e5e7e9", "#ff4545", "#f8ded3", "#ffc382", "#f5eda6", "#ffcbdc", "#dcf3f3"];
+const bgBody = ["#e5e7e9", "#83C995", "#3292B7", "#E4A9C7", "#F0B10B", "#F91001", "#977861", "#9292A3"];
 const body = document.body;
 const player = document.querySelector(".player");
 const playerHeader = player.querySelector(".player__header");
