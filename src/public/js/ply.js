@@ -54,8 +54,8 @@ function next(index) {
     count = index || count; // 플레이리스트 선곡을 하면 index에 값이 들어옴, 그렇지 않으면 단순 count ++
     
     if (count == sliderContentLength) {
-        // 끝 곡이므로 아무 일도 일어나지 않음
-        count = count;
+        // 끝 곡이므로 첫곡으로 넘어감
+        back(1);
         return;
     }
     
@@ -74,7 +74,7 @@ function back(index) {
     count = index || count;
     
     if (count == 0) {
-        count = count;
+        next(sliderContentLength-1);
         return;
     }
     
@@ -150,7 +150,6 @@ function run() {
 
 // play, pause 버튼 눌렀을 때 쿼리 수행
 function playSong() {
-    
     if (song.paused) {
         song.play();
         playIcon.style.display = "none";
