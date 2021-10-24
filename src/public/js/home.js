@@ -45,7 +45,7 @@ function dday(){
     // 카운트 퍼센테이지 기준 일자
     const startDate = new Date("2021-09-01T00:00:00");
     // 입영 날짜
-    const setDate = new Date("2022-01-06T08:00:00");
+    const setDate = new Date("2022-01-10T14:00:00");
     const now = new Date();
 
     const all = setDate.getTime() - startDate.getTime();
