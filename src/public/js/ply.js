@@ -21,7 +21,7 @@ const sliderContent = slider.querySelector(".slider__content");
 const sliderContentLength = playerPlayList.length - 1;
 const sliderWidth = 100;
 let left = 0;
-let count = 0; // 현재 선택된 노래 index
+let count = Math.floor(Math.random()*sliderContentLength); // 현재 선택된 노래 index
 let song = playerSongs[count];
 let isPlay = false; // 재생 여부 체크
 const pauseIcon = playButton.querySelector("img[alt = 'pause-icon']");
@@ -205,6 +205,10 @@ function durationSongs() {
 
 
 changeSliderContext();
+changeBgBody();
+if(count){
+    next(count);
+}
 
 // 이벤트 등록
 sliderContext.addEventListener("click", openPlayer);
