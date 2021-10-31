@@ -212,9 +212,9 @@ function scurb(e) {
 
 // inst - 노래 간 전환
 function turn_inst(){
+    inst.muted = isInst;
+    song.muted = !isInst;
     isInst = !isInst;
-    inst.muted = !isInst;
-    song.muted = isInst;
     if(!isInst){
         inst.currentTime = song.currentTime;
     }
