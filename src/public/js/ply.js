@@ -9,6 +9,7 @@ const playerHeader = player.querySelector(".player__header");
 const playerControls = player.querySelector(".player__controls");
 const playerPlayList = player.querySelectorAll(".player__song");
 const playerSongs = player.querySelectorAll(".audio");
+const playerInsts = player.querySelectorAll(".inst");
 const playButton = player.querySelector(".play");
 const nextButton = player.querySelector(".next");
 const backButton = player.querySelector(".back");
@@ -23,7 +24,9 @@ const sliderWidth = 100;
 let left = 0;
 let count = Math.floor(Math.random()*sliderContentLength); // 현재 선택된 노래 index
 let song = playerSongs[count];
+let inst = playerInsts[count];
 let isPlay = false; // 재생 여부 체크
+let isInst = false; // instrument 여부 체크
 const pauseIcon = playButton.querySelector("img[alt = 'pause-icon']");
 const playIcon = playButton.querySelector("img[alt = 'play-icon']");
 const progres = player.querySelector(".progres");
@@ -123,6 +126,7 @@ function changeBgBody() {
 function selectSong() {
     
     song = playerSongs[count];
+    inst = playerInsts[count];
     
     for (const item of playerSongs) {
         
@@ -133,8 +137,17 @@ function selectSong() {
         }
         
     }
+    for(const item of playerInsts){
+        if(item != inst){
+            item.pause();
+            item.currentTime = 0;
+        }
+    }
     
-    if (isPlay) song.play();
+    if (isPlay) {
+        song.play();
+        inst.play();
+    }
     
     
 }
@@ -152,11 +165,13 @@ function run() {
 function playSong() {
     if (song.paused) {
         song.play();
+        inst.play();
         playIcon.style.display = "none";
         pauseIcon.style.display = "block";
         
     }else{
         song.pause();
+        inst.pause();
         isPlay = false;
         playIcon.style.display = "";
         pauseIcon.style.display = "";
@@ -186,7 +201,21 @@ function scurb(e) {
     // If we use e.offsetX, we have trouble setting the song time, when the mousemove is running
     const currentTime = ( (e.clientX - progres.getBoundingClientRect().left) / progres.offsetWidth ) * song.duration;
     song.currentTime = currentTime;
+    inst.currentTime = currentTime;
 
+}
+
+// inst - 노래 간 전환
+function turn_inst(){
+    if(isInst){
+        inst.muted = true;
+        song.muted = false;
+        isInst = false;
+    } else {
+        inst.muted = false;
+        song.muted = true;
+        isInst = true;
+    }
 }
 
 // 곡이 로드되면, 곡의 길이를 받아 표시함
@@ -203,7 +232,7 @@ function durationSongs() {
 
 }
 
-
+// 처음에 무작위로 count가 설정되므로 슬라이더 콘텐츠와 배경색, 그리고 앨범 커버를 변경해줌
 changeSliderContext();
 changeBgBody();
 if(count){
@@ -245,6 +274,7 @@ document.addEventListener("pointermove", (e) => {
     if (isMove) {
         scurb(e); 
         song.muted = true;
+        inst.muted = true;
     }
 });
 
@@ -252,6 +282,7 @@ document.addEventListener("pointermove", (e) => {
 document.addEventListener("pointerup", () => {
     isMove = false;
     song.muted = false;
+    inst.muted = false;
 });
 
 //플레이리스트 선곡
@@ -274,4 +305,5 @@ playerPlayList.forEach((item, index) => {
 });
 
 
-console.log("발견된 문제가 없습니다.");
+console.log(playerInsts);
+console.log("발견된 문제가 없습니다.")
