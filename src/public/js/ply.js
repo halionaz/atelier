@@ -125,8 +125,8 @@ function changeBgBody() {
 // 실제로 재생되는 음원 변경
 function selectSong() {
     
-    song = playerSongs[count];
     inst = playerInsts[count];
+    song = playerSongs[count];
     
     for (const item of playerSongs) {
         
@@ -145,11 +145,11 @@ function selectSong() {
     }
     
     if (isPlay) {
-        song.play();
         inst.play();
+        song.play();
         inst.currentTime = song.currentTime;
-        song.muted = false;
         inst.muted = true;
+        song.muted = false;
     }
     
     
@@ -167,17 +167,17 @@ function run() {
 // play, pause 버튼 눌렀을 때 쿼리 수행
 function playSong() {
     if (song.paused) {
-        song.play();
         inst.play();
+        song.play();
         inst.currentTime = song.currentTime;
-        song.muted = isInst;
         inst.muted = !isInst;
+        song.muted = isInst;
         playIcon.style.display = "none";
         pauseIcon.style.display = "block";
         
     }else{
-        song.pause();
         inst.pause();
+        song.pause();
         isPlay = false;
         playIcon.style.display = "";
         pauseIcon.style.display = "";
@@ -213,8 +213,8 @@ function scurb(e) {
 // inst - 노래 간 전환
 function turn_inst(){
     isInst = !isInst;
-    song.muted = isInst;
     inst.muted = !isInst;
+    song.muted = isInst;
 }
 
 // 곡이 로드되면, 곡의 길이를 받아 표시함
@@ -272,8 +272,8 @@ progres.addEventListener("pointerdown", (e) => {
 document.addEventListener("pointermove", (e) => {
     if (isMove) {
         scurb(e); 
-        song.muted = true;
         inst.muted = true;
+        song.muted = true;
     }
 });
 
@@ -281,8 +281,8 @@ document.addEventListener("pointermove", (e) => {
 document.addEventListener("pointerup", () => {
     isMove = false;
     inst.currentTime = song.currentTime;
-    song.muted = isInst;
     inst.muted = !isInst;
+    song.muted = isInst;
 });
 
 //플레이리스트 선곡
