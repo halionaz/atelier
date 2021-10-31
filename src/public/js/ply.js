@@ -145,8 +145,8 @@ function selectSong() {
     }
     
     if (isPlay) {
-        inst.play();
         song.play();
+        inst.play();
         inst.currentTime = song.currentTime;
         song.muted = false;
         inst.muted = true;
@@ -170,8 +170,8 @@ function playSong() {
         song.play();
         inst.play();
         inst.currentTime = song.currentTime;
-        inst.muted = !isInst;
         song.muted = isInst;
+        inst.muted = !isInst;
         playIcon.style.display = "none";
         pauseIcon.style.display = "block";
         
@@ -212,12 +212,9 @@ function scurb(e) {
 
 // inst - 노래 간 전환
 function turn_inst(){
-    inst.muted = isInst;
-    song.muted = !isInst;
     isInst = !isInst;
-    if(isInst){
-        song.currentTime = inst.currentTime;
-    }
+    song.muted = isInst;
+    inst.muted = !isInst;
 }
 
 // 곡이 로드되면, 곡의 길이를 받아 표시함
