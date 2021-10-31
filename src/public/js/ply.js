@@ -215,6 +215,9 @@ function turn_inst(){
     isInst = !isInst;
     inst.muted = !isInst;
     song.muted = isInst;
+    if(!isInst){
+        inst.currentTime = song.currentTime;
+    }
 }
 
 // 곡이 로드되면, 곡의 길이를 받아 표시함
