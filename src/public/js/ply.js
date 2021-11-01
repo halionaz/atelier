@@ -128,20 +128,15 @@ function selectSong() {
     
     inst = playerInsts[count];
     song = playerSongs[count];
-    
-    for (const item of playerSongs) {
-        
-        //현재 재생곡이 아닌 곡들 모두 pause, 재생 내역 초기화
-        if (item != song) {
-            item.pause();
-            item.currentTime = 0;
-        }
-        
-    }
-    for(const item of playerInsts){
-        if(item != inst){
-            item.pause();
-            item.currentTime = 0;
+
+    console.log(sliderContentLength);
+
+    for(let i = 0; i <= sliderContentLength; i++){
+        if(count != i){
+            playerInsts[i].pause();
+            playerSongs[i].pause();
+            playerInsts[i].currentTime = 0;
+            playerSongs[i].currentTime = 0;
         }
     }
     
