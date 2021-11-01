@@ -148,8 +148,8 @@ function selectSong() {
         inst.play();
         song.play();
         inst.currentTime = song.currentTime;
-        inst.muted = true;
-        song.muted = false;
+        inst.muted = !isInst;
+        song.muted = isInst;
     }
     
     
@@ -282,10 +282,12 @@ document.addEventListener("pointermove", (e) => {
 
 // 프로그래스 바에서 클릭을 놓았을 때 (클릭한 이후엔 플레이어가 자유롭게 마우스를 움직일 수 있으므로 document에 달아놓음)
 document.addEventListener("pointerup", () => {
-    isMove = false;
-    inst.currentTime = song.currentTime;
-    inst.muted = !isInst;
-    song.muted = isInst;
+    if(isMove){
+        isMove = false;
+        inst.currentTime = song.currentTime;
+        inst.muted = !isInst;
+        song.muted = isInst;
+    }
 });
 
 //플레이리스트 선곡
