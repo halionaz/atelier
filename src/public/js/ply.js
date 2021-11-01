@@ -19,6 +19,7 @@ const sliderContext = player.querySelector(".slider__context");
 const sliderName = sliderContext.querySelector(".slider__name");
 const sliderTitle = sliderContext.querySelector(".slider__title");
 const sliderContent = slider.querySelector(".slider__content");
+const slider_img = sliderContent.querySelectorAll(".slider__img");
 const sliderContentLength = playerPlayList.length - 1;
 const sliderWidth = 100;
 let left = 0;
@@ -282,10 +283,8 @@ document.addEventListener("pointermove", (e) => {
 
 // 프로그래스 바에서 클릭을 놓았을 때 (클릭한 이후엔 플레이어가 자유롭게 마우스를 움직일 수 있으므로 document에 달아놓음)
 document.addEventListener("pointerup", () => {
-    turn_inst();
     if(isMove){
         isMove = false;
-        isInst = !isInst;
         inst.currentTime = song.currentTime;
         inst.muted = !isInst;
         song.muted = isInst;
@@ -315,9 +314,13 @@ playerPlayList.forEach((item, index) => {
     });
     
 });
+slider_img.forEach((item) => {
+    item.addEventListener("click", () => {
+        turn_inst();
+    })
+})
 
 // inst - 노래 변경 단축키 설정
-
 window.addEventListener("keydown", event => {
     if(event.code === "KeyC"){
         turn_inst();
